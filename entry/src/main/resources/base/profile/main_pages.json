@@ -1,0 +1,27 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/SplashPage",
+    "pages/GuidePage",
+    "pages/LoginPage",
+    "pages/home/AnnouncementDetailPage",
+    "pages/campus/AnnouncementListPage",
+    "pages/campus/NewsListPage",
+    "pages/campus/NewsDetailPage",
+    "pages/campus/CampusMapPage",
+    "pages/study/CourseSchedulePage",
+    "pages/study/CourseEditPage",
+    "pages/study/GradeQueryPage",
+    "pages/study/LibrarySearchPage",
+    "pages/study/BookDetailPage",
+    "pages/life/LostFoundListPage",
+    "pages/life/LostFoundPublishPage",
+    "pages/life/FoodListPage",
+    "pages/life/FoodDetailPage",
+    "pages/life/MusicPlayerPage",
+    "pages/profile/PersonalInfoPage",
+    "pages/profile/MyFavoritesPage",
+    "pages/profile/TodoManagePage",
+    "pages/profile/SettingsPage"
+  ]
+}

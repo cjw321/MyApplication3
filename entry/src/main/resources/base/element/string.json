@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "高校校园助手 - 一站式校园服务平台"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "高校校园助手主入口"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "校园助手"
+    },
+    {
+      "name": "internet_permission_reason",
+      "value": "用于获取校园资讯、天气等网络数据"
+    },
+    {
+      "name": "media_permission_reason",
+      "value": "用于上传头像、失物图片等内容"
+    },
+    {
+      "name": "notification_permission_reason",
+      "value": "用于发送课程提醒、待办提醒等通知"
+    }
+  ]
+}

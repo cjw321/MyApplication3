@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx hvigor *)",
+      "Read(//d/DevEcoStudioProjects/**)",
+      "Bash(./hvigorw assemblePreviewArkTs --mode module -p module=entry -p product=default)"
+    ]
+  }
+}
