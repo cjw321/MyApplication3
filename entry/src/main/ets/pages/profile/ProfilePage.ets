@@ -5,7 +5,7 @@ import { Constants } from '../../utils/Constants';
 import { PreferencesHelper } from '../../data/PreferencesHelper';
 import { MockData } from '../../data/MockData';
 import { UserInfo } from '../../model/UserModel';
-import { Theme, FontSize } from '../../utils/Theme';
+import { Theme, FontSize, Dimens } from '../../utils/Theme';
 
 @Component
 export struct ProfilePage {
@@ -205,6 +205,30 @@ export struct ProfilePage {
         }
         .borderRadius(8)
         .margin({ left: 16, right: 16 })
+
+        // 退出登录
+        Button('退出登录')
+          .width('100%')
+          .height(Dimens.BTN_HEIGHT)
+          .fontSize(FontSize.BODY)
+          .fontColor(Theme.RED_DOT)
+          .backgroundColor(Theme.cardColor(this.isDarkMode))
+          .borderRadius(Dimens.RADIUS)
+          .margin({ left: 16, right: 16, top: 24 })
+          .onClick(() => {
+            promptAction.showDialog({
+              title: '提示',
+              message: '确定退出登录吗？',
+              buttons: [
+                { text: '取消', color: Theme.TEXT_SECOND },
+                { text: '退出', color: Theme.RED_DOT }
+              ]
+            }).then(() => {
+              PreferencesHelper.putBoolean(this.context, Constants.PREF_KEY_LOGGED_IN, false);
+              PreferencesHelper.putObject(this.context, Constants.PREF_KEY_USER_INFO, MockData.getDefaultUser());
+              router.replaceUrl({ url: Constants.PAGE_LOGIN });
+            }).catch(() => {});
+          })
 
         // 底部
         Blank().height(20)
